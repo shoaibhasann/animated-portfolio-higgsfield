@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  background: #0c0c0c;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+}
+
+.hero-heading {
+  background: linear-gradient(180deg, #646973 0%, #bbccd7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hero stat cards: the glow warms up on hover. It has to be a filter, not a
+   box-shadow — the slate's clip-path would clip a shadow away. */
+.stat-card {
+  filter: drop-shadow(0 6px 14px rgba(181, 1, 167, 0.3));
+  transition:
+    filter 0.35s ease,
+    transform 0.35s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 16px rgba(226, 76, 208, 0.55))
+    drop-shadow(0 8px 18px rgba(181, 1, 167, 0.4));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-card:hover {
+    transform: none;
+  }
+}
+
+/* Hero social buttons: same brand glow as the stat cards, on hover. */
+.social-dot {
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.social-dot:hover {
+  transform: translateY(-2px);
+  border-color: rgba(226, 76, 208, 0.65) !important;
+  box-shadow: 0 0 18px rgba(182, 0, 168, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-dot:hover {
+    transform: none;
+  }
+}
+
+/* Split-flap board cells: a slat with the classic mid seam, flipping while
+   the character churns and locking flat once it settles. */
+.flap-cell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0.8em;
+  padding: 0.14em 0.08em;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+  background: linear-gradient(180deg, #1a1a21 0%, #0f0f14 49%, #17171e 51%, #0c0c11 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 1px 2px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.flap-cell::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.flap-cell {
+  position: relative;
+}
+
+.flap-cell.is-flipping {
+  /* One eased half-turn per character change: the slat falls, swaps and
+     settles instead of strobing. */
+  animation: flap-spin 300ms cubic-bezier(0.45, 0.05, 0.35, 1) infinite;
+}
+
+@keyframes flap-spin {
+  0% {
+    transform: rotateX(0deg);
+  }
+  45% {
+    transform: rotateX(-62deg);
+  }
+  55% {
+    transform: rotateX(58deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flap-cell.is-flipping {
+    animation: none;
+  }
+}
+
+/* Silver metallic name treatment in the hero identity block. */
+.hero-name {
+  background: linear-gradient(180deg, #f5f7fa 0%, #b9c1cc 78%, #9aa3af 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
