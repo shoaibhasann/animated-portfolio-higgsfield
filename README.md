@@ -31,14 +31,11 @@ npm run build
 
 ## How the motion works
 
-**Scroll-scrubbed video.** The elevator and rooftop sections map `useScroll`
-progress onto `video.currentTime`. Those clips are encoded all-intra (`-g 1`)
-so every frame is a keyframe and seeking stays frame-accurate. Because the
-transforms are pure functions of progress, the whole sequence plays backwards
-when you scroll up.
-
-**Play-once video.** The footer drift plays on entry and holds its last frame,
-so it uses a normal GOP encode and stays small.
+**Scroll-scrubbed video.** The elevator, rooftop and footer-drift sections map
+`useScroll` progress onto `video.currentTime`. Those clips are encoded
+all-intra (`-g 1`) so every frame is a keyframe and seeking stays
+frame-accurate. Because the transforms are pure functions of progress, the
+whole sequence plays backwards when you scroll up.
 
 **Transparent characters.** The hero and About clips are VP9-alpha WebM with an
 HEVC-alpha MOV fallback for Safari, so the avatar composites straight onto the

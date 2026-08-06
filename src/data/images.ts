@@ -53,8 +53,8 @@ export const TECH_REST_VIDEO_MOV = '/jack-rest.mov'
 // "The Drift Out" footer: two Seedance 4K shots stitched. A red McLaren enters
 // from the left and drifts out left, then swings around and charges back
 // through its own tire smoke to park nose-on in the right half of the frame.
-// The closing content condenses out of that smoke. Plays once on entry, then
-// holds on its last frame, so a normal GOP encode is fine (no scrubbing).
+// Scroll-scrubbed like the elevator and rooftop, so it's an all-intra encode
+// (every frame a keyframe) for frame-accurate seeking.
 export const DRIFT_VIDEO = '/drift.mp4'
 export const DRIFT_POSTER = '/drift-poster.jpg'
 
