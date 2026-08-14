@@ -266,7 +266,13 @@ export default function ContactSection(): JSX.Element {
               className="text-white/55 font-light text-[11px]"
               style={{ textShadow: '0 1px 10px rgba(0,0,0,0.9)' }}
             >
-              © 2026 Shoaib Hasan. Built end to end.
+              © 2026 Shoaib Hasan. Built end to end.{' '}
+              <a
+                href="/ai-enabled-software-developer/"
+                className="text-white/40 hover:text-white underline underline-offset-2 decoration-white/20 transition-colors"
+              >
+                AI-Enabled Software Developer
+              </a>
             </p>
             <div className="flex items-center gap-2.5">
               {SOCIALS.map(({ label, href, Icon }) => (

@@ -21,7 +21,7 @@ export const SOCIALS: Social[] = [
   { label: 'GitHub', href: 'https://github.com/shoaibhasann', Icon: SiGithub },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/shoaib-linkedin',
+    href: 'https://www.linkedin.com/in/mohd-shoaib-ansari-2a0b16230',
     Icon: Linkedin,
     primary: true,
   },

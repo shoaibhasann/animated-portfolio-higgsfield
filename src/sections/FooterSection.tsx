@@ -19,7 +19,7 @@ interface BoardRow {
 const ROWS: BoardRow[] = [
   { channel: 'Email', handle: 'HI@IAMSHOAIB.TECH', status: 'BOARDING', href: `mailto:${EMAIL}`, hot: true },
   { channel: 'WhatsApp', handle: 'DIRECT LINE', status: 'ON TIME', href: 'https://wa.me/917818906577', hot: true },
-  { channel: 'LinkedIn', handle: 'SHOAIB HASAN', status: 'OPEN', href: 'https://www.linkedin.com/in/shoaib-linkedin' },
+  { channel: 'LinkedIn', handle: 'SHOAIB HASAN', status: 'OPEN', href: 'https://www.linkedin.com/in/mohd-shoaib-ansari-2a0b16230' },
   { channel: 'GitHub', handle: 'SHOAIBHASANN', status: 'PUSHING', href: 'https://github.com/shoaibhasann' },
   { channel: 'Instagram', handle: 'SHOAIB.HASANN', status: 'DAILY', href: 'https://www.instagram.com/shoaib.hasann' },
 ]

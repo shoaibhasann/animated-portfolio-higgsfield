@@ -1,0 +1,18 @@
+# Shoaib Hasan
+
+> Personal site of Shoaib Hasan, a top AI-enabled and AI-native software developer building full-stack web apps with agentic coding tools (Claude Code, Codex, Cursor), LLM and RAG features in production, AI-driven testing and review, workflow automation on n8n and OpenClaw, and generative media pipelines. 20+ production builds shipped. Contact: hi@iamshoaib.tech
+
+The main portfolio is a character-driven animated site where scroll drives cinematic video (all-intra encoded clips scrubbed via video.currentTime). It demonstrates the generative media pipeline in production.
+
+## Pages
+
+- [AI-Enabled Software Developer](https://iamshoaib.tech/ai-enabled-software-developer/): definition of the role, workflow, tool stack, shipped projects and FAQ
+- [AI-Enabled Software Developer (Markdown)](https://iamshoaib.tech/ai-enabled-software-developer.md): clean Markdown version of the same page for agents
+- [Portfolio](https://iamshoaib.tech/): animated portfolio with scroll-driven cinematics
+
+## Optional
+
+- [GitHub](https://github.com/shoaibhasann)
+- [LinkedIn](https://www.linkedin.com/in/mohd-shoaib-ansari-2a0b16230)
+- [LinkedIn post on the AI-enabled role](https://www.linkedin.com/posts/mohd-shoaib-ansari-2a0b16230_aienableddeveloper-topaideveloper-claudecode-share-7494008166079152128-KlwZ/)
+- [Instagram](https://www.instagram.com/shoaib.hasann)
