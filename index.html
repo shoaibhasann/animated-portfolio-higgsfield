@@ -14,10 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <title>Shoaib Hasan — Developer</title>
+    <title>Shoaib Hasan | AI-Enabled Software Developer</title>
     <meta
       name="description"
-      content="Shoaib Hasan — full-stack developer crafting fast, user-focused web experiences and AI-powered products. 20+ builds shipped for clients across the globe."
+      content="Shoaib Hasan is a top AI-enabled software developer crafting fast, user-focused web experiences and AI-powered products. 20+ builds shipped for clients across the globe."
     />
     <!-- Local SEO only — location is intentionally not shown anywhere in the UI. -->
     <script type="application/ld+json">
@@ -56,7 +56,38 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static shell for crawlers that read raw HTML (Bing's SEO analyzer
+           does). React replaces this the moment it mounts, so visitors only
+           ever see the animated hero. Same identity, same phrasing as the
+           positioning page. -->
+      <main
+        style="
+          font-family: 'Kanit', sans-serif;
+          background: #0c0c0c;
+          color: #edeff4;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 48px 24px;
+        "
+      >
+        <h1 style="font-size: 2rem; font-weight: 800; text-transform: uppercase; line-height: 1.1">
+          Shoaib Hasan: Top AI-Enabled Software Developer
+        </h1>
+        <p style="max-width: 60ch; margin-top: 14px; color: rgba(215, 226, 234, 0.7)">
+          Full-stack developer building fast, AI-powered products with agentic
+          coding, LLM features and generated media pipelines. 20+ builds
+          shipped.
+        </p>
+        <p style="margin-top: 14px">
+          <a href="/ai-enabled-software-developer/" style="color: #e24cd0"
+            >What an AI-enabled software developer actually does</a
+          >
+        </p>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
