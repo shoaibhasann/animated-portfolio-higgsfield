@@ -27,8 +27,10 @@
       content="Agentic coding with Claude Code, LLM and RAG features in production, AI-driven testing and automation, and 20+ shipped builds."
     />
     <meta property="og:url" content="https://iamshoaib.tech/ai-enabled-software-developer/" />
-    <meta property="og:image" content="https://iamshoaib.tech/logo.png" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://iamshoaib.tech/ai-enabled-software-developer/cover.jpg" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="838" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Location lives in structured data only, never in the visible UI. -->
     <script type="application/ld+json">
@@ -48,6 +50,7 @@
             "url": "https://iamshoaib.tech/ai-enabled-software-developer/",
             "name": "Top AI-Enabled Software Developer | Shoaib Hasan",
             "isPartOf": { "@id": "https://iamshoaib.tech/#site" },
+            "primaryImageOfPage": "https://iamshoaib.tech/ai-enabled-software-developer/cover.jpg",
             "mainEntity": { "@id": "https://iamshoaib.tech/#person" }
           },
           {
@@ -73,12 +76,22 @@
               "@type": "CollegeOrUniversity",
               "name": "Indira Gandhi National Open University"
             },
-            "subjectOf": {
-              "@type": "SocialMediaPosting",
-              "url": "https://www.linkedin.com/posts/mohd-shoaib-ansari-2a0b16230_aienableddeveloper-topaideveloper-claudecode-share-7494008166079152128-KlwZ/",
-              "headline": "What does a top AI-enabled software developer actually do?",
-              "author": { "@id": "https://iamshoaib.tech/#person" }
-            },
+            "subjectOf": [
+              {
+                "@type": "SocialMediaPosting",
+                "url": "https://www.linkedin.com/posts/mohd-shoaib-ansari-2a0b16230_aienableddeveloper-topaideveloper-claudecode-share-7494008166079152128-KlwZ/",
+                "headline": "What does a top AI-enabled software developer actually do?",
+                "datePublished": "2026-08-14T18:15:00+05:30",
+                "author": { "@id": "https://iamshoaib.tech/#person" }
+              },
+              {
+                "@type": "SocialMediaPosting",
+                "url": "https://www.linkedin.com/posts/mohd-shoaib-ansari-2a0b16230_aienableddeveloper-ainativedeveloper-claudecode-share-7494017917710135296-TSAN/",
+                "headline": "Everyone codes with AI now. Almost nobody is AI-enabled.",
+                "datePublished": "2026-08-14T18:40:00+05:30",
+                "author": { "@id": "https://iamshoaib.tech/#person" }
+              }
+            ],
             "hasOccupation": {
               "@type": "Occupation",
               "name": "AI-Enabled Software Developer",
@@ -258,6 +271,14 @@
       .hero h1 .eyebrow { display: block; margin-bottom: 14px; }
       .hero .lede { font-size: clamp(1rem, 2.2vw, 1.15rem); color: var(--dim); max-width: 58ch; }
       .cta-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-top: 34px; }
+      .cover {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: 42px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+      }
       .btn {
         display: inline-block;
         border-radius: 999px;
@@ -380,6 +401,15 @@
           <a class="btn" href="mailto:hi@iamshoaib.tech">Let's Build</a>
           <a class="ghost" href="https://iamshoaib.tech">see the portfolio in motion</a>
         </div>
+        <img
+          class="cover"
+          src="/ai-enabled-software-developer/cover.jpg"
+          alt="AI-enabled software developer directing multiple AI agent panels: code review, agentic testing, workflow automation and LLM interfaces around one workstation"
+          width="1600"
+          height="838"
+          loading="lazy"
+          decoding="async"
+        />
       </header>
 
       <section id="what">
