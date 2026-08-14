@@ -217,7 +217,7 @@ export default function ContactSection(): JSX.Element {
         <motion.img
           ref={imgRef}
           src={CONTACT_CARD_IMAGE}
-          alt=""
+          alt="Shoaib Hasan holding a glowing business card with his email and contact details"
           aria-hidden="true"
           loading="eager"
           decoding="async"

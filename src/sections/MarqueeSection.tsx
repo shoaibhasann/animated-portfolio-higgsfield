@@ -1,6 +1,14 @@
 import { useEffect, useRef } from 'react'
 import { MARQUEE_ROW_1, MARQUEE_ROW_2 } from '../data/marqueeImages'
 
+
+// "hero-space-voyage-preview-xxxx.gif" -> "space voyage website hero design preview"
+const altFromSrc = (src: string): string => {
+  const slug = src.split('/').pop() ?? ''
+  const name = slug.replace(/^hero-/, '').replace(/-preview.*$/, '').replace(/-/g, ' ')
+  return `${name} website hero design preview`
+}
+
 export default function MarqueeSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const row1Ref = useRef<HTMLDivElement>(null)
@@ -48,7 +56,7 @@ export default function MarqueeSection() {
                 key={i}
                 src={src}
                 loading="lazy"
-                alt=""
+                alt={altFromSrc(src)}
                 className="w-[420px] h-[270px] object-cover rounded-2xl"
               />
             ))}
@@ -62,7 +70,7 @@ export default function MarqueeSection() {
                 key={i}
                 src={src}
                 loading="lazy"
-                alt=""
+                alt={altFromSrc(src)}
                 className="w-[420px] h-[270px] object-cover rounded-2xl"
               />
             ))}
