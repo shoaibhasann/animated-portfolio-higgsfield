@@ -186,8 +186,7 @@ export default function TestimonialsSection(): JSX.Element {
   )
 
   return (
-    <section
-      ref={sectionRef}
+    <section       ref={sectionRef}
       className="relative bg-[#0C0C0C]"
       style={{ height: `${RUNWAY_VH}vh` }}
     >

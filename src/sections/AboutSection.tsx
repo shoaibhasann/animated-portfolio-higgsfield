@@ -1,7 +1,6 @@
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import FadeIn from '../components/FadeIn'
 import SectionIntro from '../components/SectionIntro'
-import AnimatedText from '../components/AnimatedText'
 import ContactButton from '../components/ContactButton'
 import { ABOUT_CODING_VIDEO_MOV, ABOUT_CODING_VIDEO_WEBM } from '../data/images'
 
@@ -22,10 +21,15 @@ export default function AboutSection(): JSX.Element {
         <div className="grid md:grid-cols-2 gap-12 md:gap-14 lg:gap-24 items-center">
           {/* Left — content */}
           <div className="flex flex-col items-start gap-7 md:gap-9">
-            <AnimatedText
-              text="I'm Shoaib, a full-stack developer who turns ideas into fast, clean, AI-powered products. 20+ builds in the bag, from local brands to full platforms. Sharp design, solid code, zero fluff. Let's build something people remember."
-              className="text-[#D7E2EA] font-semibold text-left leading-relaxed max-w-[620px] text-[clamp(1.15rem,1.9vw,1.65rem)]"
-            />
+            {/* Plain text on purpose: the site-wide wipe reveal handles it.
+                (AnimatedText's scroll-scrubbed chars are one import away if
+                this ever needs to come back.) */}
+            <p className="text-[#D7E2EA] font-semibold text-left leading-relaxed max-w-[620px] text-[clamp(1.15rem,1.9vw,1.65rem)]">
+              I'm Shoaib, a full-stack developer who turns ideas into fast,
+              clean, AI-powered products. 20+ builds in the bag, from local
+              brands to full platforms. Sharp design, solid code, zero fluff.
+              Let's build something people remember.
+            </p>
 
             <FadeIn delay={0.2} x={-40} y={0}>
               <ContactButton />

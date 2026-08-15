@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import { motion, useScroll } from 'motion/react'
 import { ACCENT_TEXT } from '../styles/accent'
+import { triggerWipe } from '../lib/wipeReveal'
 import { DRIFT_POSTER, DRIFT_VIDEO } from '../data/images'
 
 const EMAIL = 'hi@iamshoaib.tech'
@@ -93,6 +94,12 @@ export default function FooterDrift(): JSX.Element {
     }
   }, [scrollYProgress])
 
+  // The text sweep fires at the same moment the content condenses out of the
+  // smoke; the viewport observer would have run it invisibly long before.
+  useEffect(() => {
+    if (revealed && sectionRef.current) triggerWipe(sectionRef.current)
+  }, [revealed])
+
   // Buffer the clip well before the footer lands: scrubbing needs the frames
   // already local or the first seeks land on black.
   useEffect(() => {
@@ -153,7 +160,10 @@ export default function FooterDrift(): JSX.Element {
           }}
         />
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 md:px-10 pt-20 pb-[34vw] sm:py-20">
+        <div
+          data-wipe-manual
+          className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 md:px-10 pt-20 pb-[34vw] sm:py-20"
+        >
           {/* Copy keeps to the left column: the car parks in the right half of
               the frame and the upper left stays clean black. */}
           <div className="sm:max-w-[52%] lg:max-w-[46%]">

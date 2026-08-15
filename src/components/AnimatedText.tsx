@@ -42,7 +42,7 @@ export default function AnimatedText({ text, className }: AnimatedTextProps): JS
   let charIndex = 0
 
   return (
-    <p ref={ref} className={className}>
+    <p ref={ref} data-no-wipe className={className}>
       {words.map((word, wordIndex) => {
         const startIndex = charIndex
         charIndex += word.length + 1

@@ -1,6 +1,5 @@
 import { Briefcase, Globe, Rocket, Zap } from 'lucide-react'
 import FadeIn from '../components/FadeIn'
-import BlurText from '../components/BlurText'
 import Magnet from '../components/Magnet'
 import ContactButton from '../components/ContactButton'
 import WalkInVideo from '../components/WalkInVideo'
@@ -66,17 +65,10 @@ export default function HeroSection(): JSX.Element {
         </FadeIn>
       </div>
 
-      {/* Giant background word */}
-      <BlurText
-        text="Developer"
-        delay={70}
-        animateBy="letters"
-        direction="bottom"
-        as="h1"
-        className="font-black uppercase tracking-tight leading-none whitespace-nowrap w-full justify-center text-[18vw] mt-7 sm:mt-0 sm:-mt-1 md:-mt-6"
-        segmentClassName="hero-heading"
-        style={{ flexWrap: 'nowrap' }}
-      />
+      {/* Giant background word; the wipe's clip variant reveals it. */}
+      <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center text-[18vw] mt-7 sm:mt-0 sm:-mt-1 md:-mt-6">
+        Developer
+      </h1>
 
       {/* Left column — identity */}
       <div className="absolute z-20 left-5 sm:left-8 md:left-10 bottom-10 sm:bottom-10 md:bottom-12 lg:bottom-16 max-w-[86%] md:max-w-[36vw]">

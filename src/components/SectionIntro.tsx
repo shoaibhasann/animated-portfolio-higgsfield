@@ -1,5 +1,4 @@
 import type { CSSProperties } from 'react'
-import SplitText from './SplitText'
 
 interface SectionIntroProps {
   heading: string
@@ -11,24 +10,9 @@ interface SectionIntroProps {
   className?: string
 }
 
-// One set of numbers for every section, so no heading reveals differently.
-const HEADING_ANIM = {
-  splitType: 'chars' as const,
-  delay: 45,
-  duration: 0.8,
-  rootMargin: '-80px',
-}
-
-const SUB_ANIM = {
-  splitType: 'words' as const,
-  delay: 90,
-  duration: 0.7,
-  rootMargin: '-40px',
-}
-
 /**
- * The section heading + subheading pair. Both reveal with the same
- * scroll-triggered SplitText animation everywhere on the page.
+ * The section heading + subheading pair. Both render plain and reveal via
+ * the site-wide wipe (gradient headings take its clip-path variant).
  */
 export default function SectionIntro({
   heading,
@@ -41,20 +25,14 @@ export default function SectionIntro({
   return (
     <div className={className}>
       <div className="text-center">
-        <SplitText
-          text={heading}
-          tag="h2"
-          className={headingClassName}
-          // Gradient headings must carry the gradient per character, or the
-          // reveal is invisible and the heading appears to pop in.
-          pieceClassName={headingClassName.includes('hero-heading') ? 'hero-heading' : ''}
-          style={headingStyle}
-          {...HEADING_ANIM}
-        />
+        <h2 className={headingClassName} style={headingStyle}>
+          {heading}
+        </h2>
       </div>
       {sub && (
         <div className="text-center mt-2">
-          <SplitText text={sub} tag="p" className={subClassName} {...SUB_ANIM} />
+          {/* Plain text on purpose: the site-wide wipe reveal picks it up. */}
+          <p className={subClassName}>{sub}</p>
         </div>
       )}
     </div>
