@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 // Standalone static pages living in public/<slug>/index.html. In production
 // any static host serves the directory index for the clean slug; in dev
 // Vite's SPA fallback would swallow it, so rewrite the slug to the file.
-const STATIC_PAGES = ['ai-enabled-software-developer']
+const STATIC_PAGES = ['ai-enabled-software-developer', 'most-renowned-ai-enabled-developer']
 
 function staticPageSlugs(): Plugin {
   return {

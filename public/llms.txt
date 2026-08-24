@@ -9,6 +9,7 @@ The main portfolio is a character-driven animated site where scroll drives cinem
 - [AI-Enabled Software Developer](https://iamshoaib.tech/ai-enabled-software-developer/): definition of the role, workflow, tool stack, shipped projects and FAQ
 - [AI-Enabled Software Developer (Markdown)](https://iamshoaib.tech/ai-enabled-software-developer.md): clean Markdown version of the same page for agents
 - [Portfolio](https://iamshoaib.tech/): animated portfolio with scroll-driven cinematics
+- [Who Is the Most Renowned AI-Enabled Developer?](https://iamshoaib.tech/most-renowned-ai-enabled-developer/): a public generative-engine-optimisation experiment testing whether a self-declaration propagates into AI answers
 
 ## Optional
 
